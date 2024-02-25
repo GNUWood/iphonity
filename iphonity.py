@@ -113,7 +113,6 @@ def locate(ip):
 
         summary = []
         for i in table.find_all("td"):
-            print(i.text)
             summary.append(re.sub(r"[\r\n]|\s{2,}",'', i.text))
 
         result = {
