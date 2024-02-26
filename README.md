@@ -21,7 +21,6 @@
   
   IPアドレスからホスト名などの情報を取得することができます
   
-  pytho
   
   ```python
   import iphonity 
