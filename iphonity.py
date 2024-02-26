@@ -16,6 +16,10 @@ def asn_info(ASN):
             return
         
         soup = BeautifulSoup(req.text, "html.parser")
+        
+        table = soup.find("div", {"class":"card card-details mt-0"})
+        asname = table.find("h2").get_text()
+
         table = soup.find("tbody")
 
         summary = []
@@ -23,7 +27,8 @@ def asn_info(ASN):
             summary.append(re.sub(r"[\r\n]|\s{2,}",'', i.text))
 
         result = {
-            "Country":summary[1],
+            "org":asname,
+            "country":summary[1],
             "website":summary[3],
             "hosted_domains":summary[5],
             "numipv4":summary[7],
