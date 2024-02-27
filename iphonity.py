@@ -6,7 +6,7 @@ request_header = {
     "User-Agent":"Mozilla/5.0 (Windows NT 10.0; rv:121.0) Gecko/20100101 Firefox/121.0"
 }
 
-def asn_info(ASN):
+def as_info(ASN):
     if not ASN == re.search("^AS|^as", ASN):
         try:
             req = requests.get(f"https://ipinfo.io/{ASN}",headers=request_header)
