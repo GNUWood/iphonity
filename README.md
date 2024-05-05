@@ -11,7 +11,7 @@
   ```python
   import iphonity
   
-  print(iphonity.asn_info("AS15169"))
+  print(iphonity.as_info("AS15169"))
   #{'Country': ' United States', 'website': 'google.com', 'hosted_domains': '18,832,601', ...
   ```
   
